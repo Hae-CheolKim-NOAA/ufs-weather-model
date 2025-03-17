@@ -89,6 +89,10 @@ export ATM_compute_tasks_cdeps_025=40
 export OCN_tasks_cdeps_025=120
 export ICE_tasks_cdeps_025=48
 
+export ATM_compute_tasks_cdeps_008=80
+export OCN_tasks_cdeps_008=1240
+export ICE_tasks_cdeps_008=1000
+
 export INPES_aqm=33
 export JNPES_aqm=8
 

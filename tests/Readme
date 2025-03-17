@@ -1,0 +1,12 @@
+git clone https://github.com/ufs-community/ufs-weather-model
+cd  ufs-weather-model
+git submodule update --init --recursive
+
+cp tests/rt.conf to something like rt.conf-test-hCk depending on your purposes (e.g., CDEPS compliant DATM test for 1/4-th degree MOM6-CICE6 is datm_cdeps_mx025_gefs) including compilation
+
+inside tests directory, do
+./rt.sh -e -a XXX -kl rt.conf-test-CDEPS-hCk >& output (where XXX is your account. e.g., drsa-hurr[13])
+
+Note that GAEA works for only bash and you have to purge module after you switch to bash.
+Take a look at JIANDE's env.
+
