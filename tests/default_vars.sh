@@ -1638,7 +1638,8 @@ export_datm_cdeps ()
 
   # datm defaults
   export INPUT_NML=input.mom6.nml.IN
-  export DIAG_TABLE=diag_table_template
+  #export DIAG_TABLE=diag_table_template
+  export DIAG_TABLE=diag_table_template_mx008
   export DATM_SRC=CFSR
   export FILEBASE_DATM=cfsr
   export MESH_ATM=${FILEBASE_DATM}_mesh.nc
