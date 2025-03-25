@@ -761,8 +761,7 @@ case ${MACHINE_ID} in
       export ECF_PORT ECF_HOST
     fi
 
-#    DISKNM=/gpfs/f6/bil-fire8/world-shared/role.epic/UFS-WM_RT
-    DISKNM=/gpfs/f6/drsa-hurr1/scratch/Hae-Cheol.Kim/UFS-WM_RT
+    DISKNM=/gpfs/f6/bil-fire8/world-shared/role.epic/UFS-WM_RT
     QUEUE=normal
     COMPILE_QUEUE=normal
     PARTITION=c6
@@ -788,7 +787,8 @@ case ${MACHINE_ID} in
 
     PARTITION=
     dprefix="/scratch1/NCEPDEV"
-    DISKNM="/scratch2/NAGAPE/epic/UFS-WM_RT"
+#    DISKNM="/scratch2/NAGAPE/epic/UFS-WM_RT"
+    DISKNM=/scratch2/NCEPDEV/stmp1/Hae-Cheol.Kim/UFS-WM_RT
     STMP="${dprefix}/stmp4"
     PTMP="${dprefix}/stmp2"
 

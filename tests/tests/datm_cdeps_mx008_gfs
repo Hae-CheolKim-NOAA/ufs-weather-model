@@ -24,10 +24,10 @@ export LIST_FILES="RESTART/20241201.120000.MOM.res.nc \
                    RESTART/20241201.120000.MOM.res_15.nc \
                    RESTART/20241201.120000.MOM.res_16.nc \
                    RESTART/iced.2024-12-01-43200.nc \
-                   RESTART/DATM_GFS_NEW.cpl.r.2024-12-01-43200.nc"
+                   RESTART/DATM_GFS.cpl.r.2024-12-01-43200.nc"
 
 export_datm_cdeps
-export atm_datamode=GFS
+export atm_datamode=GEFS
 export DAYS=0.5
 export FHMAX=12
 export RESTART_N=${FHMAX}
@@ -39,7 +39,7 @@ export JATM=1536
 export ATM_NX_GLB=$IATM
 export ATM_NY_GLB=$JATM
 export ATMRES=${IATM}x${JATM}
-export DATM_SRC=GFS_NEW
+export DATM_SRC=GFS
 export FILEBASE_DATM=gfs
 export MESH_ATM=${FILEBASE_DATM}_mesh.nc
 export stream_files="INPUT/${FILEBASE_DATM}.202412.nc"
@@ -57,7 +57,7 @@ export NY_GLB=3297
 export CICE_NPROC=1000
 export np2=`expr $CICE_NPROC / 2`
 export CICE_BLCKX=`expr $NX_GLB / $np2`
-export CICE_BLCKY=`expr $NY_GLB / 2`
+export CICE_BLCKY=`expr $NY_GLB / 2 + 1`
 export CICE_DIAGFREQ=`expr $((FHMAX-$FHROT)) \* 3600 / $DT_CICE`
 
 # resolution dependent files

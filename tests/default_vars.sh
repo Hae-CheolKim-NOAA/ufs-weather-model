@@ -1238,7 +1238,7 @@ export_cice6() {
   export CICE_MASK=kmtu_cice_NEMS_mx${OCNRES}.nc
   export CICE_GRIDATM=A
   export CICE_GRIDOCN=A
-  export CICE_GRIDICE=B
+  export CICE_GRIDICE=C
   export CICE_TR_POND_LVL=.true.
   export CICE_RESTART_POND_LVL=.false.
   # setting to true will allow Frazil FW and Salt to be included in fluxes sent to ocean
@@ -1409,10 +1409,10 @@ export DAYS=1
 
 #model configure
 export MODEL_CONFIGURE=model_configure.IN
-export SYEAR=2021
-export SMONTH=03
-export SDAY=22
-export SHOUR=06
+export SYEAR=2024
+export SMONTH=12
+export SDAY=01
+export SHOUR=00
 export CHOUR=06
 export FHMAX=24
 export FHROT=0
@@ -1587,12 +1587,12 @@ export_datm_cdeps ()
 
   # model configure
   export MODEL_CONFIGURE=datm_cdeps_configure.IN
-  export SYEAR=2011
-  export SMONTH=10
+  export SYEAR=2024
+  export SMONTH=12
   export SDAY=01
   export SHOUR=00
   export FHMAX=24
-  export DT_ATMOS=900
+  export DT_ATMOS=300
   export FHROT=0
 
   # required but unused
@@ -1619,8 +1619,8 @@ export_datm_cdeps ()
   # Set CICE6 component defaults
   export_cice6
   # default non-mushy thermo for CICE
-  export CICE_KTHERM=1
-  export CICE_TFREEZE_OPTION=linear_salt
+  export CICE_KTHERM=2
+  export CICE_TFREEZE_OPTION=mushy
 
   # Set MOM6 component defaults
   export_mom6
@@ -1643,7 +1643,7 @@ export_datm_cdeps ()
   export FILEBASE_DATM=cfsr
   export MESH_ATM=${FILEBASE_DATM}_mesh.nc
   export atm_datamode=GEFS
-  export stream_files=INPUT/${FILEBASE_DATM}.201110.nc
+  export stream_files=INPUT/${FILEBASE_DATM}.202412.nc
   export EXPORT_ALL=.false.
   export STREAM_OFFSET=0
 

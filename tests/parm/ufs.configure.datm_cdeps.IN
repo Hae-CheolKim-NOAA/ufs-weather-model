@@ -24,7 +24,7 @@ ATM_omp_num_threads:            @[atm_omp_num_threads]
 ATM_attributes::
   Verbosity = 0
   DumpFields = false
-  mesh_atm  = @[MESH_ATM]
+  mesh_atm  = INPUT/@[MESH_ATM]
   diro = "."
   logfile = atm.log
   stop_n = 24
@@ -95,8 +95,8 @@ DRIVER_attributes::
 ::
 
 MED_attributes::
-      Verbosity = 0
-      dbug_flag = 0
+      Verbosity = 5
+      dbug_flag = 5
       ATM_model = @[atm_model]
       ICE_model = @[ice_model]
       OCN_model = @[ocn_model]

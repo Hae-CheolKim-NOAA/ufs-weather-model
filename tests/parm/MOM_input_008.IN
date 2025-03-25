@@ -222,7 +222,8 @@ GRID_CONFIG = "mosaic"          !
                                 !     cartesian - use a (flat) Cartesian grid.
                                 !     spherical - use a simple spherical grid.
                                 !     mercator - use a Mercator spherical grid.
-GRID_FILE = "regional.mom6.nc"  !
+!GRID_FILE = "regional.mom6.nc"  !
+GRID_FILE = "ocean_hgrid.nc"  !
                                 ! Name of the file from which to read horizontal grid data.
 USE_TRIPOLAR_GEOLONB_BUG = False !   [Boolean] default = False
                                 ! If true, use older code that incorrectly sets the longitude in some points
@@ -256,7 +257,8 @@ TOPO_CONFIG = "file"            !
                                 !     Phillips - ACC-like idealized topography used in the Phillips config.
                                 !     dense - Denmark Strait-like dense water formation and overflow.
                                 !     USER - call a user modified routine.
-TOPO_FILE = "depth_GLBb0.08_09m11ob2_mom6.nc" ! default = "topog.nc"
+TOPO_FILE = "ocean_topog.nc" ! default = "topog.nc"
+!TOPO_FILE = "depth_GLBb0.08_09m11ob2_mom6.nc" ! default = "topog.nc"
 !TOPO_FILE = "regional.depth.rtofs.nc" ! default = "topog.nc"
 !TOPO_FILE = "depth_GLBb0.08_RTOFS_mom6.nc" ! default = "topog.nc"
 !TOPO_FILE = "depth_GLBb0.08_09m11ob_mom6.nc" ! default = "topog.nc"
@@ -1645,7 +1647,8 @@ VAR_PEN_SW = True               !   [Boolean] default = False
                                 ! the e-folding depth of incoming short wave radiation.
 CHL_FROM_FILE = True            !   [Boolean] default = True
                                 ! If true, chl_a is read from a file.
-CHL_FILE = "chl_mom6.nc"        !
+!CHL_FILE = "chl_mom6.nc"        !
+CHL_FILE = "seawifs.clim.0.08deg.nc"        !
                                 ! CHL_FILE is the file containing chl_a concentrations in the variable CHL_A. It
                                 ! is used when VAR_PEN_SW and CHL_FROM_FILE are true.
 CHL_VARNAME = "chl_a"           ! default = "CHL_A"
