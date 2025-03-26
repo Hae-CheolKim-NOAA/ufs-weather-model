@@ -761,7 +761,8 @@ case ${MACHINE_ID} in
       export ECF_PORT ECF_HOST
     fi
 
-    DISKNM=/gpfs/f6/bil-fire8/world-shared/role.epic/UFS-WM_RT
+#    DISKNM=/gpfs/f6/bil-fire8/world-shared/role.epic/UFS-WM_RT
+    DISKNM=/gpfs/f6/drsa-hurr1/scratch/Hae-Cheol.Kim/UFS-WM_RT
     QUEUE=normal
     COMPILE_QUEUE=normal
     PARTITION=c6

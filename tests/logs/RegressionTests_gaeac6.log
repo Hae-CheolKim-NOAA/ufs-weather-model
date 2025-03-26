@@ -1,7 +1,7 @@
 ====START OF GAEAC6 REGRESSION TESTING LOG====
 
 UFSWM hash used in testing:
-54125af083b57926c24a43bb3d9c22277a4d430c
+fbdba33680f19610f7dec3f2b14aaa7c73b76732
 
 Submodule hashes used in testing:
 -37cbb7d6840ae7515a9a8f0dfd4d89461b3396d1 AQM
@@ -27,7 +27,7 @@ The second time is specifically for the run phase.
 Times/Memory will be empty for failed tests.
 
 BASELINE DIRECTORY: /gpfs/f6/drsa-hurr1/scratch/Hae-Cheol.Kim/UFS-WM_RT/NEMSfv3gfs/develop-20250317
-COMPARISON DIRECTORY: /gpfs/f6/drsa-hurr1/proj-shared/Hae-Cheol.Kim/RT_RUNDIRS/Hae-Cheol.Kim/FV3_RT/rt_2595612
+COMPARISON DIRECTORY: /gpfs/f6/drsa-hurr1/proj-shared/Hae-Cheol.Kim/RT_RUNDIRS/Hae-Cheol.Kim/FV3_RT/rt_1305239
 
 RT.SH OPTIONS USED:
 * (-a) - HPC PROJECT ACCOUNT: drsa-hurr1
@@ -39,9 +39,9 @@ FAILED: UNABLE TO FINISH COMPILE -- COMPILE 'datm_cdeps_intel' [, ]
 SKIPPED: ASSOCIATED COMPILE FAILED -- TEST 'datm_cdeps_mx008_gfs_intel' [, ]( MB)
 
 SYNOPSIS:
-Starting Date/Time: 20250317 19:13:13
-Ending Date/Time: 20250317 19:17:53
-Total Time: 00h:04m:44s
+Starting Date/Time: 20250326 12:49:41
+Ending Date/Time: 20250326 12:53:21
+Total Time: 00h:03m:43s
 Compiles Completed: 0/1
 Tests Completed: 0/1
 Failed Compiles:
