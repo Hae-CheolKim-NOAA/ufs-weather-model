@@ -1,68 +1,20 @@
 ******Regression Testing Script Started******
-hfe06
+hfe01
 Machine: hera
 Account: marine-cpu
 rt.sh: Setting up hera...
-ECF_HOST = hecflow01, ECF_PORT = 3906
-Linking /scratch1/NCEPDEV/stmp2/Hae-Cheol.Kim/FV3_RT/rt_2854684 to /scratch2/NCEPDEV/marine/Hae-Cheol.Kim/ufs-weather-model/tests/run_dir
-Run regression test in: /scratch1/NCEPDEV/stmp2/Hae-Cheol.Kim/FV3_RT/rt_2854684
+Linking /scratch1/NCEPDEV/stmp2/Hae-Cheol.Kim/FV3_RT/rt_3566269 to /scratch2/NCEPDEV/marine/Hae-Cheol.Kim/ufs-weather-model/tests/run_dir
+Run regression test in: /scratch1/NCEPDEV/stmp2/Hae-Cheol.Kim/FV3_RT/rt_3566269
 rt.sh: Checking & Updating test configuration...
 No update needed to rt.conf
-Verifying ECFLOW support...
-rt_utils.sh: datm_cdeps_intel: Creating ECFLOW compile task
-rt_utils.sh: datm_cdeps_mx008_gfs_intel: Creating ECFLOW run task
-rt_utils.sh: Starting ECFLOW run
-ECF_HOST = hecflow01, ECF_PORT = 3906
-ECF_HOST = hecflow01, ECF_PORT = 3906
-ECF_HOST: hecflow01, ECF_PORT: 3906
-rt_utils.sh: Checking status of the ecflow_server...
-[06:38:14 25.3.2025] Request( --ping ), Failed to connect to hecflow01:3906. After 2 attempts. Is the server running ?
-
-rt_utils.sh: ecflow_server is not running on hecflow01:3906
-rt_utils.sh: attempting to start ecflow_server...
-ECF_HOST = hecflow01, ECF_PORT = 3906
-[06:38:16 25.3.2025] Request( --ping ), Failed to connect to hecflow01:3906. After 2 attempts. Is the server running ?
-
-Tue Mar 25 06:38:16 UTC 2025
-
-User "2406" attempting to start ecf server on "hecflow01" using ECF_PORT "3906" and with:
-ECF_HOME     : "/home/Hae-Cheol.Kim/ecflow_server"
-ECF_LOG      : "hecflow01.3906.ecf.log"
-ECF_CHECK    : "hecflow01.3906.check"
-ECF_CHECKOLD : "hecflow01.3906.check.b"
-ECF_OUT      : "/dev/null"
-
-client version is Ecflow version(5.11.4) boost(1.83.0) compiler(gcc 13.2.0) protocol(JSON cereal 1.3.0) openssl(enabled) Compiled on Feb 22 2024 17:54:05
-Checking if the server is already running on hecflow01 and port 3906
-[06:38:18 25.3.2025] Request( --ping ), Failed to connect to hecflow01:3906. After 2 attempts. Is the server running ?
-
-
-Backing up check point and log files
-
-OK starting ecFlow server...
-
-Placing server into RESTART mode...
-
-To view server on ecflow_ui - goto Servers/Manage Servers... and enter
-Name        : <unique ecFlow server name>
-Host        : hecflow01
-Port Number : 3906
-
-ping server(hecflow01:3906) succeeded in 00:00:00.002322  ~2 milliseconds
-rt_utils.sh: Starting ECFLOW tasks...
-rt_utils.sh: Total number of tasks processed -- 2
-
-ECFLOW Tasks Remaining: 2/2 ..............................................
-ECFLOW Tasks Remaining: 1/2 ....................................................................................................................................................................................................................
-ECFLOW Tasks Remaining: 0/2 
-rt_utils.sh: ECFLOW tasks completed, cleaning up suite
+rt.sh: Running compile datm_cdeps_intel
+rt.sh: Compile datm_cdeps_intel completed.
+rt.sh: Running test datm_cdeps_mx008_gfs_intel using compile datm_cdeps_intel
+rt.sh: Run with test datm_cdeps_mx008_gfs_intel completed.
 rt.sh: Generating Regression Testing Log...
 
-Performing Cleanup...
-REGRESSION TEST RESULT: SUCCESS
+REGRESSION TEST RESULT: FAILURE
 ******Regression Testing Script Completed******
 rt.sh finished
 rt.sh: Cleaning up...
-rt_utils.sh: Checking whether to stop ecflow_server...
-rt_utils.sh: No other suites running, stopping ecflow_server
 rt.sh: Exiting.

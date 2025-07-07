@@ -6,30 +6,30 @@ export TEST_DESCR="DATM_CDEPS-MOM6-CICE-CMEPS_GFS - 1/12deg ocean+ice"
 
 export CNTL_DIR=datm_cdeps_mx008_gfs
 
-export LIST_FILES="RESTART/20241201.120000.MOM.res.nc \
-                   RESTART/20241201.120000.MOM.res_1.nc \
-                   RESTART/20241201.120000.MOM.res_2.nc \
-                   RESTART/20241201.120000.MOM.res_3.nc \
-                   RESTART/20241201.120000.MOM.res_4.nc \
-                   RESTART/20241201.120000.MOM.res_5.nc \
-                   RESTART/20241201.120000.MOM.res_6.nc \
-                   RESTART/20241201.120000.MOM.res_7.nc \
-                   RESTART/20241201.120000.MOM.res_8.nc \
-                   RESTART/20241201.120000.MOM.res_9.nc \
-                   RESTART/20241201.120000.MOM.res_10.nc \
-                   RESTART/20241201.120000.MOM.res_11.nc \
-                   RESTART/20241201.120000.MOM.res_12.nc \
-                   RESTART/20241201.120000.MOM.res_13.nc \
-                   RESTART/20241201.120000.MOM.res_14.nc \
-                   RESTART/20241201.120000.MOM.res_15.nc \
-                   RESTART/20241201.120000.MOM.res_16.nc \
-                   RESTART/iced.2024-12-01-43200.nc \
-                   RESTART/DATM_GFS.cpl.r.2024-12-01-43200.nc"
+export LIST_FILES="RESTART/20230701.120000.MOM.res.nc \
+                   RESTART/20230701.120000.MOM.res_1.nc \
+                   RESTART/20230701.120000.MOM.res_2.nc \
+                   RESTART/20230701.120000.MOM.res_3.nc \
+                   RESTART/20230701.120000.MOM.res_4.nc \
+                   RESTART/20230701.120000.MOM.res_5.nc \
+                   RESTART/20230701.120000.MOM.res_6.nc \
+                   RESTART/20230701.120000.MOM.res_7.nc \
+                   RESTART/20230701.120000.MOM.res_8.nc \
+                   RESTART/20230701.120000.MOM.res_9.nc \
+                   RESTART/20230701.120000.MOM.res_10.nc \
+                   RESTART/20230701.120000.MOM.res_11.nc \
+                   RESTART/20230701.120000.MOM.res_12.nc \
+                   RESTART/20230701.120000.MOM.res_13.nc \
+                   RESTART/20230701.120000.MOM.res_14.nc \
+                   RESTART/20230701.120000.MOM.res_15.nc \
+                   RESTART/20230701.120000.MOM.res_16.nc \
+                   RESTART/iced.2023-07-01-43200.nc \
+                   RESTART/DATM_GFS.cpl.r.2023-07-01-43200.nc"
 
 export_datm_cdeps
 export atm_datamode=GEFS
 export DAYS=0.5
-export FHMAX=192
+export FHMAX=12
 export RESTART_N=${FHMAX}
 export DT_DYNAM_MOM6=300
 export DT_THERM_MOM6=1200
@@ -42,7 +42,7 @@ export ATMRES=${IATM}x${JATM}
 export DATM_SRC=GFS
 export FILEBASE_DATM=gfs
 export MESH_ATM=${FILEBASE_DATM}_mesh.nc
-export stream_files="INPUT/${FILEBASE_DATM}.202412.nc"
+export stream_files="INPUT/${FILEBASE_DATM}.202307.nc"
 export STREAM_OFFSET=-21600
 
 ATM_compute_tasks=${ATM_compute_tasks_cdeps_008}

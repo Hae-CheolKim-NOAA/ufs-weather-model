@@ -47,7 +47,7 @@
     history_chunksize   = @[CICE_HISTORY_CHUNK]
     history_deflate     = @[CICE_HISTORY_DEFLATE]
     history_precision   = @[CICE_HISTORY_PREC]
-    histfreq            = 'm','d','h','1','x'
+    histfreq            = 'h','x','x','x','x'
     histfreq_n          = @[CICE_HISTFREQ_N]
     hist_avg            = @[CICE_HIST_AVG]
     hist_suffix         = @[CICE_hist_suffix]
@@ -107,7 +107,7 @@
 
 &dynamics_nml
     kdyn            = 1
-    ndte            = 120
+    ndte            = 300
     revised_evp     = .false.
     evp_algorithm   = 'standard_2d'
     brlx            = 300.0

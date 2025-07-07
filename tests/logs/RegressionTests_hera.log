@@ -1,7 +1,7 @@
 ====START OF HERA REGRESSION TESTING LOG====
 
 UFSWM hash used in testing:
-94a06941e4b02ee0a9aa699a154ccb5d26a0bd69
+fbdba33680f19610f7dec3f2b14aaa7c73b76732
 
 Submodule hashes used in testing:
  37cbb7d6840ae7515a9a8f0dfd4d89461b3396d1 AQM (v0.2.0-37-g37cbb7d)
@@ -26,29 +26,32 @@ The first time is for the full script (prep+run+finalize).
 The second time is specifically for the run phase.
 Times/Memory will be empty for failed tests.
 
-BASELINE DIRECTORY: /scratch2/NCEPDEV/stmp1/Hae-Cheol.Kim/UFS-WM_RT/NEMSfv3gfs/develop-20250317
-COMPARISON DIRECTORY: /scratch1/NCEPDEV/stmp2/Hae-Cheol.Kim/FV3_RT/rt_2854684
+BASELINE DIRECTORY: /scratch2/NCEPDEV/marine/Hae-Cheol.Kim/UFS-WM_RT/NEMSfv3gfs/develop-20250317
+COMPARISON DIRECTORY: /scratch1/NCEPDEV/stmp2/Hae-Cheol.Kim/FV3_RT/rt_3566269
 
 RT.SH OPTIONS USED:
 * (-a) - HPC PROJECT ACCOUNT: marine-cpu
 * (-l) - USE CONFIG FILE: rt.conf-test-CDEPS-hCk
 * (-k) - KEEP RUN DIRECTORY
-* (-e) - USE ECFLOW
 
-PASS -- COMPILE 'datm_cdeps_intel' [08:11, 06:48]
-PASS -- TEST 'datm_cdeps_mx008_gfs_intel' [35:48, 22:56](2456 MB)
+PASS -- COMPILE 'datm_cdeps_intel' [08:10, 06:37]
+FAILED: UNABLE TO COMPLETE COMPARISON -- TEST 'datm_cdeps_mx008_gfs_intel' [, ]( MB)
 
 SYNOPSIS:
-Starting Date/Time: 20250325 06:38:12
-Ending Date/Time: 20250325 07:23:39
-Total Time: 00h:45m:33s
+Starting Date/Time: 20250630 19:43:53
+Ending Date/Time: 20250630 22:12:48
+Total Time: 02h:29m:00s
 Compiles Completed: 1/1
-Tests Completed: 1/1
+Tests Completed: 0/1
+Failed Tests:
+* TEST datm_cdeps_mx008_gfs_intel: FAILED: UNABLE TO COMPLETE COMPARISON
+-- LOG: /scratch2/NCEPDEV/marine/Hae-Cheol.Kim/ufs-weather-model/tests/logs/log_hera/run_datm_cdeps_mx008_gfs_intel.log
 
 NOTES:
-A file 'test_changes.list' was generated but is empty.
+A file 'test_changes.list' was generated with list of all failed tests.
+You can use './rt.sh -c -b test_changes.list' to create baselines for the failed tests.
 If you are using this log as a pull request verification, please commit 'test_changes.list'.
 
-Result: SUCCESS
+Result: FAILURE
 
 ====END OF HERA REGRESSION TESTING LOG====

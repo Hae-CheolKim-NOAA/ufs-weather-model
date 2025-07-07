@@ -10,7 +10,8 @@ mkdir -p $MOM6_OUTPUT_DIR
 # DATM fixed input
 ln -s  @[INPUTDATA_ROOT]/DATM_CDEPS/@[DATM_SRC]/@[MESH_ATM] INPUT
 #ln -s  @[INPUTDATA_ROOT]/DATM_CDEPS/@[DATM_SRC]/201110/*201110*nc INPUT
-ln -s  @[INPUTDATA_ROOT]/DATM_CDEPS/@[DATM_SRC]/202412/*202412*nc INPUT
+#ln -s  @[INPUTDATA_ROOT]/DATM_CDEPS/@[DATM_SRC]/202412/*202412*nc INPUT
+ln -s  @[INPUTDATA_ROOT]/DATM_CDEPS/@[DATM_SRC]/${SYEAR}${SMONTH}/*202412*nc INPUT
 
 # MOM6 fixed input
 ICERES="${OCNRES:0:1}.${OCNRES:1}"
@@ -25,18 +26,28 @@ cp    @[INPUTDATA_ROOT]/CICE_FIX/@[OCNRES]/mesh.mx@[OCNRES].nc .
 if [ $WARM_START = .false. ]; then
 # cold start
  if [[ $OCNRES == '008' ]]; then
-  cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/2024120100/MOM*.nc ./INPUT
-  cp    @[INPUTDATA_ROOT]/CICE_IC/@[OCNRES]/cice_model_@[ICERES].cpc.res_2024120100.nc cice_model.res.nc
+  cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/${SYEAR}${SMONTH}${SDAY}${SHOUR}/MOM*.nc ./INPUT
+  cp    @[INPUTDATA_ROOT]/CICE_IC/@[OCNRES]/cice_model_@[ICERES].cpc.res_${SYEAR}${SMONTH}${SDAY}${SHOUR}.nc cice_model.res.nc
  else
-  cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/2024120100/MOM6_IC_TS*.nc ./INPUT/MOM6_IC_TS.nc
-  cp    @[INPUTDATA_ROOT]/CICE_IC/@[OCNRES]/cice_model_@[ICERES].cpc.res_2024120100.nc cice_model.res.nc
+  cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/${SYEAR}${SMONTH}${SDAY}${SHOUR}/MOM6_IC_TS*.nc ./INPUT/MOM6_IC_TS.nc
+  cp    @[INPUTDATA_ROOT]/CICE_IC/@[OCNRES]/cice_model_@[ICERES].cpc.res_${SYEAR}${SMONTH}${SDAY}${SHOUR}.nc cice_model.res.nc
   if [[ $ODA_INCUPD == 'True' ]];then
-     cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/2024120100/mom6_increment.nc ./INPUT/mom6_increment.nc
+     cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/${SYEAR}${SMONTH}${SDAY}${SHOUR}/mom6_increment.nc ./INPUT/mom6_increment.nc
   fi
+# if [[ $OCNRES == '008' ]]; then
+#  cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/2024120100/MOM*.nc ./INPUT
+#  cp    @[INPUTDATA_ROOT]/CICE_IC/@[OCNRES]/cice_model_@[ICERES].cpc.res_2024120100.nc cice_model.res.nc
+# else
+#  cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/2024120100/MOM6_IC_TS*.nc ./INPUT/MOM6_IC_TS.nc
+#  cp    @[INPUTDATA_ROOT]/CICE_IC/@[OCNRES]/cice_model_@[ICERES].cpc.res_2024120100.nc cice_model.res.nc
+#  if [[ $ODA_INCUPD == 'True' ]];then
+#     cp    @[INPUTDATA_ROOT]/MOM6_IC/@[OCNRES]/2024120100/mom6_increment.nc ./INPUT/mom6_increment.nc
+#  fi
  fi
 else
 # warm start
- cp ../${DEP_RUN}${RT_SUFFIX}/${MOM6_RESTART_DIR}/20241201.120000.MOM.res.nc ./INPUT/MOM.res.nc
+ cp ../${DEP_RUN}${RT_SUFFIX}/${MOM6_RESTART_DIR}/${SYEAR}${SMONTH}${SDAY}${SHOUR}.120000.MOM.res.nc ./INPUT/MOM.res.nc
+# cp ../${DEP_RUN}${RT_SUFFIX}/${MOM6_RESTART_DIR}/20241201.120000.MOM.res.nc ./INPUT/MOM.res.nc
 
 # CMEPS restart and pointer files
  RFILE="DATM_${DATM_SRC}.cpl.r.2024-12-01-43200.nc"

@@ -6,7 +6,14 @@ cp tests/rt.conf to something like rt.conf-test-hCk depending on your purposes (
 
 inside tests directory, do
 ./rt.sh -e -a XXX -kl rt.conf-test-CDEPS-hCk >& output (where XXX is your account. e.g., drsa-hurr[13])
+or you can turn off ecflow
+./rt.sh -a XXX -kl rt.conf-test-CDEPS-hCk >& output 
 
 Note that GAEA works for only bash and you have to purge module after you switch to bash.
 Take a look at JIANDE's env.
 
+"DISKNM" path and (INPUTDATA_ROOT) exists in rt.sh and opnReqTest
+
+Grab DISKNM and INPUTDATA_ROOT and fill in those IC's and forcings
+
+Change simulation time (year, month, day, etc) under model_configure in the default_vars.sh

@@ -1,0 +1,7 @@
+******Regression Testing Script Started******
+hfe06
+mkdir: cannot create directory '/scratch2/NCEPDEV/marine/Hae-Cheol.Kim/ufs-weather-model/tests/lock': File exists
+Only one instance of rt.sh can be running at a time
+rt.sh finished
+rt.sh: Cleaning up...
+rt.sh: Exiting.

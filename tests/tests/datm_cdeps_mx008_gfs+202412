@@ -29,7 +29,7 @@ export LIST_FILES="RESTART/20241201.120000.MOM.res.nc \
 export_datm_cdeps
 export atm_datamode=GEFS
 export DAYS=0.5
-export FHMAX=192
+export FHMAX=12
 export RESTART_N=${FHMAX}
 export DT_DYNAM_MOM6=300
 export DT_THERM_MOM6=1200

@@ -413,8 +413,7 @@ else
 
 fi
 
-#hCk export WLCLK_dflt=30
-export WLCLK_dflt=08:00:00
+export WLCLK_dflt=30
 
 export WLCLK=${WLCLK_dflt}
 export CMP_DATAONLY=false
@@ -1412,10 +1411,10 @@ export DAYS=1
 export MODEL_CONFIGURE=model_configure.IN
 export SYEAR=2024
 export SMONTH=12
-export SDAY=23
+export SDAY=01
 export SHOUR=00
 export CHOUR=06
-export FHMAX=192
+export FHMAX=24
 export FHROT=0
 export QUILTING_RESTART=.false.
 export WRTTASK_PER_GROUP=${WPG_cpl_dflt}
@@ -1590,9 +1589,9 @@ export_datm_cdeps ()
   export MODEL_CONFIGURE=datm_cdeps_configure.IN
   export SYEAR=2024
   export SMONTH=12
-  export SDAY=23
+  export SDAY=01
   export SHOUR=00
-  export FHMAX=192
+  export FHMAX=24
   export DT_ATMOS=300
   export FHROT=0
 
